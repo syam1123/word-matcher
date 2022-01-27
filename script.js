@@ -52,7 +52,8 @@ function testSpeech() {
     const dontWordsUsed = speechResult
       .split(' ')
       .filter((word) => dontWords.includes(word.toLowerCase()))
-
+    doResult.textContent = ''
+    dontResult.textContent = ''
     if (doWordsUsed.length) {
       doResult.textContent = `Do words used: ${doWordsUsed.join(',')}`
       doResult.style.background = 'lime'
